@@ -5,8 +5,8 @@ const app = express();
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var db = require('./db');
-var ItemRouter = require('../server/Item/ItemRouter')
-var AuthRouter = require('../server/Item/AuthRouter')
+var ItemRouter = require('./Item/ItemRouter')
+var AuthRouter = require('./Item/AuthRouter')
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
