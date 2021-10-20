@@ -20,7 +20,7 @@ import { PaymentComponent } from './payment/payment.component';
     AdminComponent,
     AddFoodComponent,
     CardComponent,
-    ButtonAddComponent
+    ButtonAddComponent,
 
     NavbarComponent,
     FoodCardsComponent,
