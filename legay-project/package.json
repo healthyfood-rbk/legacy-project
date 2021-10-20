@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "nodemon ./server/index.js",
+    "start": " nodemon server/index.js",
     "build": "ng build",
+    "seed:db": "node server/db/seed",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
