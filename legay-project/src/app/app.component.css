@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.apple-store-logo {
+  background-position: -132px -182px;
+  height: 42px;
+  width: 128px;
+}
+.google-store-logo {
+  background-position: 0 -182px;
+  height: 42px;
+  width: 130px;
+}
