@@ -1,1 +1,1 @@
-# legacy-project
+# legacy-project-angular
