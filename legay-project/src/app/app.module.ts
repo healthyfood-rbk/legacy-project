@@ -39,7 +39,7 @@ import { LogoutButtonComponent } from './auth-components/logout-button/logout-bu
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
     AuthModule.forRoot({
       ...env.auth,
     })

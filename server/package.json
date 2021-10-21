@@ -16,7 +16,6 @@
     "mongoose": "^6.0.11",
     "morgan": "^1.10.0",
     "path": "^0.12.7",
-    "jsonwebtoken": "^8.5.1",
     "postcss": "^8.3.9",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
