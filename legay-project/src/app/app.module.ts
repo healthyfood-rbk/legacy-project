@@ -7,7 +7,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AddFoodComponent } from './admin/add-food-List/add-food.component';
 import { CardComponent } from './admin/card/card.component';
 import { ButtonAddComponent } from './admin/button-add/button-add.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodCardsComponent } from './food-cards/food-cards.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -39,9 +39,11 @@ import { LogoutButtonComponent } from './auth-components/logout-button/logout-bu
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule
     AuthModule.forRoot({
       ...env.auth,
     })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
