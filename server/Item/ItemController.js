@@ -13,7 +13,7 @@ exports.createOne = function (req, res) {
 // get all items
 exports.retrieve = function (req, res) {
     Item.find({}).then((result) => {
-        res.send(result)
+        res.json(result)
     }).catch((err) => {
         res.send(err)
     })
