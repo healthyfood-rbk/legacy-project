@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@auth0/auth0-angular": "^1.7.0",
     "autoprefixer": "^10.3.7",
     "axios": "^0.23.0",
     "jsonwebtoken": "^8.5.1",

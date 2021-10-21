@@ -11,6 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodCardsComponent } from './food-cards/food-cards.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AdminSignupComponent } from './auth-components/admin-signup/admin-signup.component';
+
+import { LoginButtonComponent } from './auth-components/login-button/login-button.component';
+import {AuthModule} from '@auth0/auth0-angular'
+import {environment as env } from '../environments/environment';
+import { LogoutButtonComponent } from './auth-components/logout-button/logout-button.component';
 
 
 @NgModule({
@@ -24,13 +30,20 @@ import { PaymentComponent } from './payment/payment.component';
 
     NavbarComponent,
     FoodCardsComponent,
-    PaymentComponent
+    PaymentComponent,
+    AdminSignupComponent,
+    LoginButtonComponent,
+    LogoutButtonComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule
+    AuthModule.forRoot({
+      ...env.auth,
+    })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
