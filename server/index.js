@@ -14,15 +14,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //route
 app.use("/", ItemRouter)
 app.use("/", AuthRouter)
-app.use(express.static("../dist/LegacyProject"));
+app.use(express.static("../legay-project/dist/LegacyProject"));
 app.get('/', function (req, res) {
 });
-
-app.listen(3000, () => {
-  console.log('server is running');
+const port = 3000
+app.listen(port, () => {
+  console.log(`server is running on localhost${port}`);
 })
 
-
+// C:\Users\DELL\Desktop\legacy-project\server
 
 
 
