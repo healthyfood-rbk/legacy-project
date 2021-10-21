@@ -8,6 +8,5 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class AppComponent {
   title = 'LegacyProject';
-  constructor(public auth: AuthService){}
+  constructor(){}
 }
-C:\Users\ASUS\OneDrive\Desktop\legacy-project\legacy-project\legay-project\data
