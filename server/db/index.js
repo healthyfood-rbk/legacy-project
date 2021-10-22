@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
-var mongoUri = 'mongodb://localhost/items';
+require("dotenv").config()
+const {MONGODB} = process.env
+var mongoUri = MONGODB;
 
 // TODO: Connect Mongoose to our local MongoDB via URI specified above and export it below
 mongoose.connect(mongoUri, {
