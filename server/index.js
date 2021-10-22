@@ -20,7 +20,7 @@ app.use(express.static("../legay-project/dist/LegacyProject"));
 app.get('/', function (req, res) {
 });
 app.listen(PORT, () => {
-  console.log(`server is running on localhost${PORT}`);
+  console.log(`server is running on http://localhost:${PORT}`);
 })
 
 // C:\Users\DELL\Desktop\legacy-project\server
