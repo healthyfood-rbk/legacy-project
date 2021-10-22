@@ -10,27 +10,19 @@ export class FoodCardsComponent implements OnInit {
 data = [] as any
 verif = false
 holder :any
-  constructor(private fetch:DatabaseService) { 
-  
- 
- 
-  }
-  
-
+  constructor(private fetch:DatabaseService) {   }
   ngOnInit(): void {
     this.fetch.fetch().subscribe(res =>{
       console.log(res)
       this.data = res
-    
+
       console.log('this is it',this.data)
     })
   
   }
-in(lift : any,e:any){
-
+in(e:any){
   this.verif = true
   this.holder = e
-  console.log(this.holder)
 }
 out (){
   this.verif = false

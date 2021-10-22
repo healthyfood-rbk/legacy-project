@@ -1,7 +1,7 @@
 <div class="container mx-auto">
       <div class="grid grid-cols-4 ">
-      <div *ngFor="let element of data" class="flex flex-wrap -mx-4">
-        <div class=" relative w-full  h-full sm:w-4/5 md:w-1/2 xl:w-4/5 p-4 transition duration-500 ease-in-out  hover:bg-transparent transform hover:-translate-y-1 hover:scale-100 " (mouseover) ="in($event,element._id)" (mouseout) = 'out()' >
+      <div  *ngFor="let element of data" class="flex flex-wrap -mx-4">
+        <div class=" relative w-full  h-full sm:w-4/5 md:w-1/2 xl:w-4/5 p-4 transition duration-500 ease-in-out  hover:bg-transparent transform hover:-translate-y-1 hover:scale-100 " (mouseover) ="in(element._id)" (mouseout) = 'out()' >
           <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
           <div class="relative pb-48 overflow-hidden">
             <img class="absolute inset-0 h-full w-full object-cover  " src= {{element.imageUrl}} alt="">
