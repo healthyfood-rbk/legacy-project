@@ -8,6 +8,8 @@ import { DatabaseService } from '../Servies/database.service';
 })
 export class FoodCardsComponent implements OnInit {
 data = [] as any
+verif = false
+holder :any
   constructor(private fetch:DatabaseService) { 
   
  
@@ -24,6 +26,14 @@ data = [] as any
     })
   
   }
+in(lift : any,e:any){
 
+  this.verif = true
+  this.holder = e
+  console.log(this.holder)
+}
+out (){
+  this.verif = false
+}
 
 }

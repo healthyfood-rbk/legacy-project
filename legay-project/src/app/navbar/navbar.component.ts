@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
+import { DatabaseService } from '../Servies/database.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,13 +8,13 @@ import { AuthService } from '@auth0/auth0-angular';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor(public auth : AuthService) { }
+  constructor(public auth : AuthService,private service : DatabaseService) { }
 
   ngOnInit(): void {
   }
   onChange(e:any){
-    console.log(e.target.value)
+this.service.lifter =  e.target.value 
+console.log(this.service.lifter)
   }
 
 }
