@@ -1,7 +1,9 @@
+require("dotenv").config()
 const express = require("express");
 var path = require("path")
 // const path = __dirname + '/../dist/';
 const app = express();
+const {PORT} = process.env
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var db = require('./db');
@@ -17,9 +19,8 @@ app.use("/", AuthRouter)
 app.use(express.static("../legay-project/dist/LegacyProject"));
 app.get('/', function (req, res) {
 });
-const port = 3000
-app.listen(port, () => {
-  console.log(`server is running on localhost${port}`);
+app.listen(PORT, () => {
+  console.log(`server is running on http://localhost:${PORT}`);
 })
 
 // C:\Users\DELL\Desktop\legacy-project\server
