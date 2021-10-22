@@ -17,6 +17,7 @@ import { LoginButtonComponent } from './auth-components/login-button/login-butto
 import {AuthModule} from '@auth0/auth0-angular'
 import {environment as env } from '../environments/environment';
 import { LogoutButtonComponent } from './auth-components/logout-button/logout-button.component';
+import { FiltredDataComponent } from './filtred-data/filtred-data.component';
 
 
 @NgModule({
@@ -34,12 +35,13 @@ import { LogoutButtonComponent } from './auth-components/logout-button/logout-bu
     AdminSignupComponent,
     LoginButtonComponent,
     LogoutButtonComponent,
+    FiltredDataComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
     AuthModule.forRoot({
       ...env.auth,
     })

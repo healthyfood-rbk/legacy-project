@@ -12,5 +12,8 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onChange(e:any){
+    console.log(e.target.value)
+  }
 
 }
