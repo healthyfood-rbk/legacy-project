@@ -7,7 +7,7 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DatabaseService {
-  
+  lifter : any
     path : string = 'http://localhost:3000/'
     constructor(private http: HttpClient) { 
     }
