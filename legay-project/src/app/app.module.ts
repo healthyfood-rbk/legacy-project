@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
-import { AdminComponent } from './admin/admin.component';
+// import { AdminComponent } from './admin/admin.component';
 import { AddFoodComponent } from './admin/add-food-List/add-food.component';
 import { CardComponent } from './admin/card/card.component';
 
@@ -18,17 +18,14 @@ import {AuthModule} from '@auth0/auth0-angular'
 import {environment as env } from '../environments/environment';
 import { LogoutButtonComponent } from './auth-components/logout-button/logout-button.component';
 import { FiltredDataComponent } from './filtred-data/filtred-data.component';
-
+import { AppRoutingModule ,routingComponents } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    AdminComponent,
     AddFoodComponent,
     CardComponent,
- 
-
+    routingComponents,
     NavbarComponent,
     FoodCardsComponent,
     PaymentComponent,
@@ -36,12 +33,12 @@ import { FiltredDataComponent } from './filtred-data/filtred-data.component';
     LoginButtonComponent,
     LogoutButtonComponent,
     FiltredDataComponent,
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
     AuthModule.forRoot({
       ...env.auth,
     })
