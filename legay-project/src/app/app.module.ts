@@ -18,18 +18,17 @@ import {AuthModule} from '@auth0/auth0-angular'
 import {environment as env } from '../environments/environment';
 import { LogoutButtonComponent } from './auth-components/logout-button/logout-button.component';
 import { FiltredDataComponent } from './filtred-data/filtred-data.component';
-
+import { AppRoutingModule ,routingComponents } from './app-routing.module';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-
     AdminComponent,
+    AppComponent,
     AddFoodComponent,
     CardComponent,
- 
-
+    routingComponents,
     NavbarComponent,
     FoodCardsComponent,
     PaymentComponent,
@@ -37,12 +36,15 @@ import { FiltredDataComponent } from './filtred-data/filtred-data.component';
     LoginButtonComponent,
     LogoutButtonComponent,
     FiltredDataComponent,
-
   ],
   imports: [
+    AdminModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
+
+    AppRoutingModule,
+
     RouterModule.forRoot([
       {path : "" , component:FoodCardsComponent},
       {path : "details" , component:FiltredDataComponent}
@@ -50,6 +52,7 @@ import { FiltredDataComponent } from './filtred-data/filtred-data.component';
       // {path : "details" , component:FiltredDataComponent},
 
     ]),
+
     AuthModule.forRoot({
       ...env.auth,
     })

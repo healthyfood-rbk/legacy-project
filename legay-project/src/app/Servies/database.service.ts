@@ -6,12 +6,15 @@ import { catchError, retry } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
 
 import { CardComponent } from '../admin/card/card.component';
-const baseUrl = 'http://localhost:3000'
+// const baseUrl = 'http://localhost:3000'
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
+
+
+  lifter : any 
 
   private messageSource = new BehaviorSubject<any>("default message")
   currentMessage = this.messageSource.asObservable();
@@ -20,6 +23,7 @@ export class DatabaseService {
 
 
   
+
 
 
     
@@ -31,13 +35,13 @@ export class DatabaseService {
       this.messageSource.next(message)
     }
  fetch () : Observable<any>{
-  return  this.http.get(baseUrl+"/api/admin")
+  return  this.http.get<any>("http://localhost:3001/api/admin")
  }
 //  update(id, data): Observable<any> {
 //   return this.http.put(`${baseUrl}/${id}`, data);
 // }
 delete(id:any): Observable<any> {
-    return this.http.delete(`${baseUrl}/api/admin/${id}`);
+    return this.http.delete(`/api/admin/${id}`);
   }
 
 
