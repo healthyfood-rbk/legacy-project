@@ -9,6 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "proxy" : "http://localhost:3000",
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
@@ -21,6 +22,7 @@
     "@angular/router": "~12.2.0",
     "@auth0/auth0-angular": "^1.7.0",
     "autoprefixer": "^10.3.7",
+    "axios": "^0.23.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.11",
     "morgan": "^1.10.0",

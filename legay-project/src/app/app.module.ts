@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddFoodComponent } from './admin/add-food-List/add-food.component';
 import { CardComponent } from './admin/card/card.component';
-import { ButtonAddComponent } from './admin/button-add/button-add.component';
 
+import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodCardsComponent } from './food-cards/food-cards.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -17,31 +17,35 @@ import { LoginButtonComponent } from './auth-components/login-button/login-butto
 import {AuthModule} from '@auth0/auth0-angular'
 import {environment as env } from '../environments/environment';
 import { LogoutButtonComponent } from './auth-components/logout-button/logout-button.component';
-
+import { FiltredDataComponent } from './filtred-data/filtred-data.component';
+import { AppRoutingModule ,routingComponents } from './app-routing.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-
     AdminComponent,
+    AppComponent,
     AddFoodComponent,
     CardComponent,
-    ButtonAddComponent,
-
+    routingComponents,
     NavbarComponent,
     FoodCardsComponent,
     PaymentComponent,
     AdminSignupComponent,
     LoginButtonComponent,
     LogoutButtonComponent,
-
+    FiltredDataComponent,
   ],
   imports: [
+    AdminModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
     AuthModule.forRoot({
       ...env.auth,
     })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
