@@ -8,8 +8,9 @@ import { DatabaseService } from '../Servies/database.service';
 })
 export class FoodCardsComponent implements OnInit {
 data = [] as any
-verif = false
-holder :any
+holder : any
+message :any
+
   constructor(private fetch:DatabaseService) {   }
   ngOnInit(): void {
     this.fetch.fetch().subscribe(res =>{
@@ -20,12 +21,14 @@ holder :any
     })
   
   }
-in(e:any){
-  this.verif = true
-  this.holder = e
+inject(element : any){
+this.holder = element
+console.log(this.holder)
 }
-out (){
-  this.verif = false
+sub(){
+  if(this.holder.length){
+    this.fetch.currentMessage.subscribe(message => this.message = message)
+  }
 }
 
 }

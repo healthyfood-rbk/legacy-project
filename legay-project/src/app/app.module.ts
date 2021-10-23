@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-
+import { RouterModule } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AddFoodComponent } from './admin/add-food-List/add-food.component';
 import { CardComponent } from './admin/card/card.component';
@@ -20,6 +20,7 @@ import { LogoutButtonComponent } from './auth-components/logout-button/logout-bu
 import { FiltredDataComponent } from './filtred-data/filtred-data.component';
 import { AppRoutingModule ,routingComponents } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +42,17 @@ import { AdminModule } from './admin/admin.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+
     AppRoutingModule,
+
+    RouterModule.forRoot([
+      {path : "" , component:FoodCardsComponent},
+      {path : "details" , component:FiltredDataComponent}
+      // {path : "**" , component:},
+      // {path : "details" , component:FiltredDataComponent},
+
+    ]),
+
     AuthModule.forRoot({
       ...env.auth,
     })
