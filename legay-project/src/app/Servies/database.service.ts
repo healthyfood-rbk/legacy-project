@@ -9,11 +9,7 @@ const baseUrl = 'http://localhost:3000'
   providedIn: 'root'
 })
 export class DatabaseService {
-
-  
-
-
-    
+  lifter:any
 
     constructor(private http: HttpClient) { 
     }
