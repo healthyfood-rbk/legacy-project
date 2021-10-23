@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddFoodComponent } from './admin/add-food-List/add-food.component';
 import { CardComponent } from './admin/card/card.component';
-import { ButtonAddComponent } from './admin/button-add/button-add.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodCardsComponent } from './food-cards/food-cards.component';
@@ -33,7 +33,7 @@ import { CartComponent } from './cart/cart.component';
     AdminComponent,
     AddFoodComponent,
     CardComponent,
-    ButtonAddComponent,
+ 
 
     NavbarComponent,
     FoodCardsComponent,
