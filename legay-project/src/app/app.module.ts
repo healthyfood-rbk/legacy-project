@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AddFoodComponent } from './admin/add-food-List/add-food.component';
 import { CardComponent } from './admin/card/card.component';
-import { ButtonAddComponent } from './admin/button-add/button-add.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodCardsComponent } from './food-cards/food-cards.component';
@@ -28,7 +28,7 @@ import { FiltredDataComponent } from './filtred-data/filtred-data.component';
     AdminComponent,
     AddFoodComponent,
     CardComponent,
-    ButtonAddComponent,
+ 
 
     NavbarComponent,
     FoodCardsComponent,
