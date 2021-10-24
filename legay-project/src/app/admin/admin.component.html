@@ -1,4 +1,47 @@
-<main class="profile-page mt-48" *ngIf="auth.isAuthenticated$ | async">
+<!-- <app-add-food></app-add-food> -->
+<main class="profile-page mt-48">
+  <section class="relative block h-500-px">
+    <div
+      class="absolute top-0 w-full h-full bg-center bg-cover"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80');
+      "
+    >
+      <span
+        id="blackOverlay"
+        class="w-full h-full absolute opacity-50 bg-black"
+      ></span>
+    </div>
+    <div
+      class="
+        top-auto
+        bottom-0
+        left-0
+        right-0
+        w-full
+        absolute
+        pointer-events-none
+        overflow-hidden
+        h-70-px
+      "
+      style="transform: translateZ(0)"
+    >
+      <svg
+        class="absolute bottom-0 overflow-hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        version="1.1"
+        viewBox="0 0 2560 100"
+        x="0"
+        y="0"
+      >
+        <polygon
+          class="text-blueGray-200 fill-current"
+          points="2560 0 2560 100 0 100"
+        ></polygon>
+      </svg>
+    </div>
+  </section>
   <section class="relative py-16 bg-blueGray-200">
     <div class="container mx-auto px-4">
       <div
@@ -21,7 +64,7 @@
               <div class="relative">
                 <img
                   alt="..."
-                  src="../../assets/restaurant-1.jpg"
+                  src="assets/img/team-2-800x800.jpg"
                   class="
                     shadow-xl
                     rounded-full
@@ -46,42 +89,31 @@
               "
             >
               <div class="py-6 px-3 mt-32 sm:mt-0">
-                <a href="/addfood">
-                  <button
-                    class="
-                      bg-red-600
-                      active:bg-red-700
-                      btn
-                      uppercase
-                      text-white
-                      font-bold
-                      hover:shadow-md
-                      shadow
-                      text-xs
-                      px-4
-                      py-2
-                      rounded
-                      outline-none
-                      focus:outline-none
-                      sm:mr-2
-                      mb-1
-                      ease-linear
-                      transition-all
-                      duration-150
-                      btn
-                      border border-indigo-500
-                      p-1
-                      px-4
-                      font-semibold
-                      cursor-pointer
-                      text-gray-200
-                      ml-2
-                      bg-red-600
-                    "
-                  >
-                    Add New Healthy Food
-                  </button>
-                </a>
+                <button
+                  class="
+                    bg-red-600
+                    active:bg-red-700
+                    btn
+                    uppercase
+                    text-white
+                    font-bold
+                    hover:shadow-md
+                    shadow
+                    text-xs
+                    px-4
+                    py-2
+                    rounded
+                    outline-none
+                    focus:outline-none
+                    sm:mr-2
+                    mb-1
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                >
+                  Add New Healthy Food
+                </button>
               </div>
             </div>
             <div class="w-full lg:w-4/12 px-4 lg:order-1">
@@ -114,7 +146,7 @@
                   >
                     10
                   </span>
-                  <span class="text-sm text-blueGray-400">Report</span>
+                  <span class="text-sm text-blueGray-400">Photos</span>
                 </div>
                 <div class="lg:mr-4 p-3 text-center">
                   <span
@@ -127,7 +159,7 @@
                       text-blueGray-600
                     "
                   >
-                    90
+                    89
                   </span>
                   <span class="text-sm text-blueGray-400">Food List</span>
                 </div>
@@ -139,7 +171,7 @@
               class="
                 text-4xl
                 font-semibold
-                leading-normal
+                leading-normal               
                 text-blueGray-700
                 mb-2
               "
@@ -176,16 +208,7 @@
               <div class="w-full lg:w-9/12 px-4">
                 <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
                   A new Restaurant since 2017 , have a lot of healthy food known
-                  as the best one in ghazella. Hershey's oldest freestanding
-                  restaurant. A local favorite for 83+ years. Featuring our
-                  famous DeAngelis spaghetti sauces and our famous Upside Down
-                  pizza. Homemade, delicious Italian dishes, featuring seafood,
-                  steaks, and pasta. Full pub menu and sandwich selection. Full
-                  menu offered all day and late night. Full bar with
-                  entertainment on weekends. Home to the stars, cast parties and
-                  celebrities from the Hershey Theatre. Conveniently located on
-                  Chocolate Avenue, directly across from the Hershey Story
-                  Museum.
+                  as the best one in ghazella.
                 </p>
                 <a href="javascript:void(0)" class="font-normal text-red-600">
                   Show more
@@ -199,4 +222,4 @@
   </section>
 </main>
 
-<app-card></app-card>
+<!-- <app-card></app-card> -->
