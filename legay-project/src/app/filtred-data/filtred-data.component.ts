@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from '../Servies/database.service';
 
 @Component({
   selector: 'app-filtred-data',
@@ -7,15 +6,10 @@ import { DatabaseService } from '../Servies/database.service';
   styleUrls: ['./filtred-data.component.css']
 })
 export class FiltredDataComponent implements OnInit {
-message : any
-  constructor(private fetch:DatabaseService) { }
+
+  constructor() { }
 
   ngOnInit(): void {
-    console.log(this.message)
   }
-  sub(){
 
-      this.fetch.currentMessage.subscribe(message => this.message = message)
-
-  }
 }

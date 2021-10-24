@@ -22,6 +22,7 @@ export class CardComponent implements OnInit {
       console.log('this is it',this.data)
     })
   }
+  //DeleteFood
   deleteFood( _id: any ): void {
       console.log("done deleted",_id);
   //  this.fetch.delete(`${baseUrl}/${this.data.element._id}`)
@@ -34,5 +35,20 @@ export class CardComponent implements OnInit {
           console.log(error);
         });
   }
+
+  //updateFood
+  updateFood( _id: any ): void {
+//     console.log("done updated",_id);
+// //  this.fetch.delete(`${baseUrl}/${this.data.element._id}`)
+//   this.fetch.update(_id,{})
+//     .subscribe(
+      
+//       (        response: any) => {console.log(response);
+//       },
+//       (        error: any) => {
+//         console.log(error);
+//       });
+}
+
 
 }
