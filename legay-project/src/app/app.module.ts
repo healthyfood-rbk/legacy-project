@@ -23,6 +23,9 @@ import { FilterPipe } from './Pipes/filter.pipe';
 
 
 
+import {UpdateComponent} from './admin/update/update.component'
+import {FooterOneComponent} from './footer/footer.component'
+console.log(document.cookie.length)
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,7 @@ import { FilterPipe } from './Pipes/filter.pipe';
     AddFoodComponent,
     CardComponent,
     ButtonAddComponent,
+   
 
     NavbarComponent,
     FoodCardsComponent,
@@ -42,6 +46,8 @@ import { FilterPipe } from './Pipes/filter.pipe';
     FilterPipe,
 
 
+    UpdateComponent,
+    FooterOneComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,12 @@ import { FilterPipe } from './Pipes/filter.pipe';
     HttpClientModule,
     RouterModule.forRoot([
       {path : "" , component:FoodCardsComponent},
-      {path : "details" , component:FiltredDataComponent}
+      {path : "details" , component:FiltredDataComponent},
+      {path : "details" , component:FiltredDataComponent},
+      {path : "admin" , component:AdminComponent},
+      {path : "addfood", component: AddFoodComponent},
+      {path : "updatefood", component: UpdateComponent},
+
       // {path : "**" , component:},
       // {path : "details" , component:FiltredDataComponent},
 

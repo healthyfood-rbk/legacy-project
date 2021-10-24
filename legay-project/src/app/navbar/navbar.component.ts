@@ -31,4 +31,19 @@ console.log(this.valueholder)
 this.inject(this.valueholder)
 
   }
+  check(){
+    console.log(this.valueholder)
+    
+    if(this.valueholder.length){
+  
+      this.service.lifter = this.data.filter((e : any)=>{
+        return e.name === this.valueholder
+      })
+      console.log('navbar',this.service.lifter)
+    }
+    else{
+      console.log("notworking");
+      
+    }
+  }
 }
