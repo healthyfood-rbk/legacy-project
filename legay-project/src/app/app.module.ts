@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AddFoodComponent } from './admin/add-food-List/add-food.component';
 import { CardComponent } from './admin/card/card.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodCardsComponent } from './food-cards/food-cards.component';
@@ -18,17 +17,18 @@ import {AuthModule} from '@auth0/auth0-angular'
 import {environment as env } from '../environments/environment';
 import { LogoutButtonComponent } from './auth-components/logout-button/logout-button.component';
 import { FiltredDataComponent } from './filtred-data/filtred-data.component';
-import { AppRoutingModule ,routingComponents } from './app-routing.module';
-import { AdminModule } from './admin/admin.module';
-
-
+import {UpdateComponent} from './admin/update/update.component'
+import {FooterOneComponent} from './footer/footer.component'
+console.log(document.cookie.length)
 @NgModule({
   declarations: [
-    AdminComponent,
     AppComponent,
+
+    AdminComponent,
     AddFoodComponent,
     CardComponent,
-    routingComponents,
+   
+
     NavbarComponent,
     FoodCardsComponent,
     PaymentComponent,
@@ -36,23 +36,24 @@ import { AdminModule } from './admin/admin.module';
     LoginButtonComponent,
     LogoutButtonComponent,
     FiltredDataComponent,
+    UpdateComponent,
+    FooterOneComponent
   ],
   imports: [
-    AdminModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
-
-    AppRoutingModule,
-
     RouterModule.forRoot([
       {path : "" , component:FoodCardsComponent},
-      {path : "details" , component:FiltredDataComponent}
+      {path : "details" , component:FiltredDataComponent},
+      {path : "admin" , component:AdminComponent},
+      {path : "addfood", component: AddFoodComponent},
+      {path : "updatefood", component: UpdateComponent},
+
       // {path : "**" , component:},
       // {path : "details" , component:FiltredDataComponent},
 
     ]),
-
     AuthModule.forRoot({
       ...env.auth,
     })
