@@ -1,23 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
 import { DatabaseService } from '../Servies/database.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  data = [] as any
-  valueholder : any
-  constructor(public auth : AuthService,private service : DatabaseService) { }
+  data = [] as any;
+  valueholder: any;
+  constructor(
+    public auth: AuthService,
+    private service: DatabaseService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.service.fetch().subscribe(res =>{
-      console.log(res)
-      this.data = res
-
-    })
+    this.service.fetch().subscribe((res) => {
+      console.log(res);
+      this.data = res;
+    });
   }
   
     inject(element : any){
@@ -45,5 +49,8 @@ this.inject(this.valueholder)
       console.log("notworking");
       
     }
+  }
+  navigate() {
+    this.router.navigate(['/cart']);
   }
 }
