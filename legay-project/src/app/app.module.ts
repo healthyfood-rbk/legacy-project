@@ -33,6 +33,7 @@ import { FilterPipe } from './Pipes/filter.pipe';
     import { AppRoutingModule, routingComponents } from './app-routing.module';
     // import { AdminModule } from './admin/admin.module';
     import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { LoadingorderComponent } from './loadingorder/loadingorder.component';
     
     @NgModule({
       declarations: [
@@ -51,6 +52,7 @@ import { FilterPipe } from './Pipes/filter.pipe';
     FiltredDataComponent,
     FilterPipe,
     AddToCartComponent,
+    LoadingorderComponent,
     // UpdateComponent,
     // FooterOneComponent
   ],
@@ -66,6 +68,7 @@ import { FilterPipe } from './Pipes/filter.pipe';
       {path : "admin" , component:AdminComponent},
       {path : "addfood", component: AddFoodComponent},
       { path: 'cart', component: AddToCartComponent },
+      {path : "loading",component : LoadingorderComponent},
       // {path : "updatefood", component: UpdateComponent},
     // AppRoutingModule,
     ]),

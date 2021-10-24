@@ -16,3 +16,18 @@
   width: 30%;
   float: right;
 }
+.removebtn{
+  position: absolute;
+  width: 108px;
+  top: 82px;
+  height: 36px;
+  left: 93%;
+}
+.checkpoint{
+  position: absolute;
+  top: 24px;
+  left: 80%;
+}
+.orderbtn{
+  height: 80px;
+}
