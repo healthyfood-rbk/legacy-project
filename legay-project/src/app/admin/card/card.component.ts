@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DatabaseService } from '../../Servies/database.service';
@@ -9,10 +8,8 @@ const baseUrl = 'http://localhost:3000'
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  currentFood = null;
-  data = [] as any
-  http: any;
-  constructor(private fetch:DatabaseService) { }
+data : any
+  constructor(private fetch : DatabaseService) { }
 
   ngOnInit(): void {
     this.fetch.fetch().subscribe(res =>{

@@ -7,9 +7,11 @@ import { DatabaseService } from '../Servies/database.service';
   styleUrls: ['./food-cards.component.css'],
 })
 export class FoodCardsComponent implements OnInit {
-  data = [] as any;
-  holder: object = {};
-  message: any;
+data = [] as any
+message :any
+detailsinj : any
+holder: object = {};
+
 
   constructor(private fetch: DatabaseService) {}
   ngOnInit(): void {
@@ -18,11 +20,31 @@ export class FoodCardsComponent implements OnInit {
       console.log(res);
       this.data = res;
 
-      console.log('this is it', this.data);
-    });
+      console.log('this is it',this.data)
+    })
+  this.sub()
   }
 
-  public cardItems: Object[] = [];
+inject(element : any){
+  this.fetch.emit(element)
+this.holder = element
+console.log(this.holder)
+}
+
+injectdetails(element : any){
+  this.fetch.save(element)
+this.detailsinj = element
+console.log(this.detailsinj)
+}
+
+sub(){  
+  this.fetch.on().subscribe(message => this.message = message)
+}
+
+subdetails(){  
+  this.fetch.sub().subscribe(message => this.message = message)
+}
+public cardItems: Object[] = [];
   injectCard(element: any) {
     this.cardItems.push(element);
     console.log('this card items', this.cardItems);
@@ -30,13 +52,5 @@ export class FoodCardsComponent implements OnInit {
     localStorage.setItem('cardData', JSON.stringify(this.cardItems));
     console.log(this.holder);
   }
-  inject(element: any) {
-    this.holder = element;
-    console.log(this.holder);
-  }
-  // sub(){
-  //   if(this.holder.length){
-  //     this.fetch.currentMessage.subscribe(message => this.message = message)
-  //   }
-  // }
 }
+
