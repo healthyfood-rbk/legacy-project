@@ -18,15 +18,7 @@ export class DatabaseService {
 
   private messageSource = new BehaviorSubject<any>("default message")
   currentMessage = this.messageSource.asObservable();
-  lifter : any
     path : string = 'http://localhost:3000/'
-
-
-  
-
-
-
-    
 
 
     constructor(private http: HttpClient) { 
@@ -35,7 +27,7 @@ export class DatabaseService {
       this.messageSource.next(message)
     }
  fetch () : Observable<any>{
-  return  this.http.get<any>("http://localhost:3001/api/admin")
+  return  this.http.get<any>("http://localhost:3000/api/admin")
  }
 //  update(id, data): Observable<any> {
 //   return this.http.put(`${baseUrl}/${id}`, data);

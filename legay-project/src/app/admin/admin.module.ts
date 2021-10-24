@@ -1,14 +1,14 @@
 import { CardComponent } from './card/card.component';
-import { AdminComponent } from './admin.component';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { AddFoodComponent } from './add-food-List/add-food.component';
 import { NgModule } from '@angular/core';
 
 @NgModule({
-  declarations: [AdminComponent, AddFoodComponent, CardComponent],
+  declarations: [AddFoodComponent, CardComponent],
   imports: [BrowserModule],
   providers: [],
-  bootstrap: [AdminComponent],
+  bootstrap: [CardComponent],
   exports: [],
 })
 export class AdminModule {}

@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { AddFoodComponent } from './admin/add-food-List/add-food.component';
-import { CardComponent } from './admin/card/card.component';
+
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -24,10 +23,8 @@ import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
-    AdminComponent,
-    AppComponent,
-    AddFoodComponent,
-    CardComponent,
+ 
+    AppComponent,  
     routingComponents,
     NavbarComponent,
     FoodCardsComponent,
@@ -38,7 +35,7 @@ import { AdminModule } from './admin/admin.module';
     FiltredDataComponent,
   ],
   imports: [
-    AdminModule,
+    // AdminModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
