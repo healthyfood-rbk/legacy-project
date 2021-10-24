@@ -23,7 +23,7 @@
     <!-- Search field -->
     <form class="mb-4 w-full md:mb-0 md:w-1/4">
       <label class="hidden" for="search-form">Search</label>
-      <input (keyup) = "onChange($event) ; check()" class="
+      <input (keyup) = "onChange($event)" class="
           bg-grey-lightest
           border-2
           focus:border-orange
@@ -64,20 +64,6 @@
               md:border-none md:p-0
             " href="#">
             Contact
-          </a>
-        </li>
-        <li class="md:ml-4">
-          <a class="
-              border-t
-              block
-              no-underline
-              hover:underline
-              py-2
-              text-grey-darkest
-              hover:text-black
-              md:border-none md:p-0
-            " href="" [routerLink]="['/cart']" (click)="navigate()">
-            Add to cards
           </a>
         </li>
         <li class="md:ml-4">
