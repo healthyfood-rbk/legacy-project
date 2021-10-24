@@ -1,0 +1,18 @@
+.totalStyle {
+  font-size: xx-large;
+  float: right;
+  padding: 50px 50px 50px 50px;
+}
+
+.noItem {
+  text-align: center;
+  font-size: xxx-large;
+  color: grey;
+}
+
+.totalContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  float: right;
+}
