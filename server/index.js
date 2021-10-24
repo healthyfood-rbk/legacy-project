@@ -1,16 +1,16 @@
 require("dotenv").config()
+const cors = require("cors")
 const express = require("express");
 var path = require("path")
 // const path = __dirname + '/../dist/';
-var cors = require('cors')
 const app = express();
-const { PORT } = process.env
+app.use(cors())
+const {PORT} = process.env
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var db = require('./db');
 var ItemRouter = require('../server/Item/ItemRouter')
 var AuthRouter = require('../server/Item/AuthRouter')
-app.use(cors())
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -22,7 +22,6 @@
           "options": {
             "outputPath": "dist/LegacyProject",
             "index": "src/index.html",
-            "sourceMap": true,
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
