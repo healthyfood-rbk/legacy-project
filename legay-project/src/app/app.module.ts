@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AddFoodComponent } from './admin/add-food-List/add-food.component';
 import { CardComponent } from './admin/card/card.component';
-
+import { ButtonAddComponent } from './admin/button-add/button-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodCardsComponent } from './food-cards/food-cards.component';
@@ -18,6 +18,8 @@ import {AuthModule} from '@auth0/auth0-angular'
 import {environment as env } from '../environments/environment';
 import { LogoutButtonComponent } from './auth-components/logout-button/logout-button.component';
 import { FiltredDataComponent } from './filtred-data/filtred-data.component';
+import { FilterPipe } from './Pipes/filter.pipe';
+
 
 
 
@@ -28,7 +30,7 @@ import { FiltredDataComponent } from './filtred-data/filtred-data.component';
     AdminComponent,
     AddFoodComponent,
     CardComponent,
- 
+    ButtonAddComponent,
 
     NavbarComponent,
     FoodCardsComponent,
@@ -37,6 +39,8 @@ import { FiltredDataComponent } from './filtred-data/filtred-data.component';
     LoginButtonComponent,
     LogoutButtonComponent,
     FiltredDataComponent,
+    FilterPipe,
+
 
   ],
   imports: [

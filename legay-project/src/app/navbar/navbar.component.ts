@@ -19,24 +19,16 @@ export class NavbarComponent implements OnInit {
 
     })
   }
-  check(){
-    console.log(this.valueholder)
-    
-    if(this.valueholder.length){
   
-      this.service.lifter = this.data.filter((e : any)=>{
-        return e.name === this.valueholder
-      })
-      console.log('navbar',this.service.lifter)
+    inject(element : any){
+      this.service.emit(element)
+  
     }
-    else{
-      console.log("notworking");
-      
-    }
-  }
+
   onChange(e:any){
 this.valueholder =  e.target.value 
-// console.log(this.valueholder)
-  }
+console.log(this.valueholder)
+this.inject(this.valueholder)
 
+  }
 }

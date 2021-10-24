@@ -10,6 +10,7 @@ export class FoodCardsComponent implements OnInit {
 data = [] as any
 holder : any
 message :any
+detailsinj : any
 
   constructor(private fetch:DatabaseService) {   }
   ngOnInit(): void {
@@ -19,16 +20,28 @@ message :any
 
       console.log('this is it',this.data)
     })
-  
+  this.sub()
   }
 inject(element : any){
+  this.fetch.emit(element)
 this.holder = element
 console.log(this.holder)
 }
+injectdetails(element : any){
+  this.fetch.save(element)
+this.detailsinj = element
+console.log(this.detailsinj)
+}
+
 sub(){
-  if(this.holder.length){
-    this.fetch.currentMessage.subscribe(message => this.message = message)
-  }
+    
+  this.fetch.on().subscribe(message => this.message = message)
+
+}
+subdetails(){
+    
+  this.fetch.sub().subscribe(message => this.message = message)
+
 }
 
 }
