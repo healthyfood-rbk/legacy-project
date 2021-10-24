@@ -4,8 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
-
-
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodCardsComponent } from './food-cards/food-cards.component';
@@ -13,18 +11,17 @@ import { PaymentComponent } from './payment/payment.component';
 import { AdminSignupComponent } from './auth-components/admin-signup/admin-signup.component';
 
 import { LoginButtonComponent } from './auth-components/login-button/login-button.component';
-import {AuthModule} from '@auth0/auth0-angular'
-import {environment as env } from '../environments/environment';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from '../environments/environment';
 import { LogoutButtonComponent } from './auth-components/logout-button/logout-button.component';
 import { FiltredDataComponent } from './filtred-data/filtred-data.component';
-import { AppRoutingModule ,routingComponents } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
-
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 @NgModule({
   declarations: [
- 
-    AppComponent,  
+    AppComponent,
     routingComponents,
     NavbarComponent,
     FoodCardsComponent,
@@ -33,6 +30,7 @@ import { AdminModule } from './admin/admin.module';
     LoginButtonComponent,
     LogoutButtonComponent,
     FiltredDataComponent,
+    AddToCartComponent,
   ],
   imports: [
     // AdminModule,
@@ -43,20 +41,19 @@ import { AdminModule } from './admin/admin.module';
     AppRoutingModule,
 
     RouterModule.forRoot([
-      {path : "" , component:FoodCardsComponent},
-      {path : "details" , component:FiltredDataComponent}
+      { path: '', component: FoodCardsComponent },
+      { path: 'details', component: FiltredDataComponent },
+      { path: 'cart', component: AddToCartComponent },
       // {path : "**" , component:},
       // {path : "details" , component:FiltredDataComponent},
-
     ]),
 
     AuthModule.forRoot({
       ...env.auth,
     }),
-    AppRoutingModule
-
+    // AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
