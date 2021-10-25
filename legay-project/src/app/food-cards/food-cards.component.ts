@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../Servies/database.service';
-
+import { AuthService } from '@auth0/auth0-angular';
 @Component({
   selector: 'app-food-cards',
   templateUrl: './food-cards.component.html',
-  styleUrls: ['./food-cards.component.css'],
+  styleUrls: ['./food-cards.component.css']
 })
 export class FoodCardsComponent implements OnInit {
 data = [] as any
@@ -13,7 +13,7 @@ detailsinj : any
 holder: object = {};
 
 
-  constructor(private fetch: DatabaseService) {}
+  constructor(private fetch:DatabaseService,public auth : AuthService) {   }
   ngOnInit(): void {
     // this.cardItems = [];
     this.fetch.fetch().subscribe((res) => {

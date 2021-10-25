@@ -31,7 +31,7 @@ exports.updateOne = function (req, res) {
 
     const id = req.params.id
     // console.log(req.params.id)
-    Item.findByIdAndUpdate(id, req.body).then((result) => {
+    Item.findByIdAndUpdate({_id:id}, req.body).then((result) => {
         res.json(result)
     }).catch((err) => {
         res.send(err)
@@ -40,7 +40,8 @@ exports.updateOne = function (req, res) {
 };
 // delete one item
 exports.deleteOne = function (req, res) {
-    Item.deleteOne({ number: req.params.number }).then((result) => {
+    const id = req.params.id
+    Item.deleteOne({ _id:id }).then((result) => {
         res.send(result)
     }).catch((err) => {
         res.send(err)
