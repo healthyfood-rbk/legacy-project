@@ -13,11 +13,30 @@ export class NavbarComponent implements OnInit {
   constructor(public auth : AuthService,private service : DatabaseService) { }
 
   ngOnInit(): void {
+<<<<<<< HEAD
     this.service.fetch().subscribe(res =>{
       console.log(res)
       this.data = res
 
     })
+=======
+    this.service.fetch().subscribe((res) => {
+      console.log(res);
+      this.data = res;
+    });
+  }
+  
+    inject(element : any){
+      this.service.emit(element)
+  
+    }
+
+  onChange(e:any){
+this.valueholder =  e.target.value 
+console.log(this.valueholder)
+this.inject(this.valueholder)
+
+>>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
   }
   check(){
     console.log(this.valueholder)

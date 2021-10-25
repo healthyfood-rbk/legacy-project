@@ -14,7 +14,13 @@ export class LoginButtonComponent implements OnInit {
   }
 
   loginWithRedirect() : void {
+<<<<<<< HEAD
     this.auth.loginWithRedirect()
+=======
+    this.auth.loginWithRedirect();
+
+    
+>>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
   }
 
 }

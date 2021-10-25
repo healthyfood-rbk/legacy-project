@@ -1,0 +1,33 @@
+.totalStyle {
+  font-size: xx-large;
+  float: right;
+  padding: 50px 50px 50px 50px;
+}
+
+.noItem {
+  text-align: center;
+  font-size: xxx-large;
+  color: grey;
+}
+
+.totalContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  float: right;
+}
+.removebtn{
+  position: absolute;
+  width: 108px;
+  top: 82px;
+  height: 36px;
+  left: 93%;
+}
+.checkpoint{
+  position: absolute;
+  top: 24px;
+  left: 80%;
+}
+.orderbtn{
+  height: 80px;
+}

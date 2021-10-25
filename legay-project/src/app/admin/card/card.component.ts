@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../../Servies/database.service';
 const baseUrl = 'http://localhost:3000'
@@ -8,10 +7,15 @@ const baseUrl = 'http://localhost:3000'
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+<<<<<<< HEAD
   currentFood :string ='';
   data = [] as any
   http: any;
   constructor(private fetch: DatabaseService) { }
+=======
+data : any
+  constructor(private fetch : DatabaseService) { }
+>>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
 
   ngOnInit(): void {
     this.currentFood = this.fetch.currentFood;
