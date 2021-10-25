@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../Servies/database.service';
-
+import { AuthService } from '@auth0/auth0-angular';
 @Component({
   selector: 'app-food-cards',
   templateUrl: './food-cards.component.html',
@@ -8,22 +8,27 @@ import { DatabaseService } from '../Servies/database.service';
 })
 export class FoodCardsComponent implements OnInit {
 data = [] as any
-  constructor(private fetch:DatabaseService) { 
-  
- 
- 
-  }
-  
+holder : any
+message :any
 
+  constructor(private fetch:DatabaseService,public auth : AuthService) {   }
   ngOnInit(): void {
     this.fetch.fetch().subscribe(res =>{
       console.log(res)
       this.data = res
-    
+
       console.log('this is it',this.data)
     })
   
   }
-
+inject(element : any){
+this.holder = element
+console.log(this.holder)
+}
+sub(){
+  if(this.holder.length){
+    this.fetch.currentMessage.subscribe(message => this.message = message)
+  }
+}
 
 }

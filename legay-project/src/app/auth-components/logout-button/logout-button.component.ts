@@ -15,6 +15,6 @@ export class LogoutButtonComponent implements OnInit {
   }
 
   logout() : void{
-    this.auth.logout({returnTo : this.doc.location.origin})
+    this.auth.logout({returnTo : this.doc.location.pathname = 'http://localhost:4200'})
   }
 }
