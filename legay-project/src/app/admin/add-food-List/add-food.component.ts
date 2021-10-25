@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DatabaseService } from '../../Servies/database.service';
+const baseUrl = 'http://localhost:3000'
 
 @Component({
   selector: 'app-add-food',
@@ -6,10 +9,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-food.component.css']
 })
 export class AddFoodComponent implements OnInit {
-
-  constructor() { }
+  data = {
+    imageUrl:"",
+    ingredients:"",
+    name:"",
+    price: ""
+  } as any
+  constructor(private fetch:DatabaseService ) { }
 
   ngOnInit(): void {
   }
+  createFood( data:any): void {
+   
+
+    this.fetch.create(data)
+    .subscribe(
+      (response : any) => {
+        console.log(response);
+        console.log("done created",data);
+      },
+      (error:any) => {
+        console.log(error);
+      });
+}
 
 }
