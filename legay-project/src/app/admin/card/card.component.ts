@@ -7,24 +7,21 @@ const baseUrl = 'http://localhost:3000'
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-<<<<<<< HEAD
+  message : any
   currentFood :string ='';
   data = [] as any
   http: any;
   constructor(private fetch: DatabaseService) { }
-=======
-data : any
-  constructor(private fetch : DatabaseService) { }
->>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
 
   ngOnInit(): void {
-    this.currentFood = this.fetch.currentFood;
+    // this.currentFood = this.fetch.currentFood;
     this.fetch.fetch().subscribe(res => {
       console.log(res)
       this.data = res
 
       console.log('this is it admin', this.data)
     })
+    this.sub()
   }
   deleteFood(_id: any): void {
     console.log("done deleted", _id);
@@ -39,6 +36,8 @@ data : any
           console.log(error);
         });
   }
-  
+  sub(){  
+    this.fetch.on().subscribe(message => this.message = message)
+  }
 
 }

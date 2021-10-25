@@ -8,38 +8,13 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class FoodCardsComponent implements OnInit {
 data = [] as any
-<<<<<<< HEAD
-holder : any
-message :any
-=======
 message :any
 detailsinj : any
 holder: object = {};
 
->>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
 
   constructor(private fetch:DatabaseService,public auth : AuthService) {   }
   ngOnInit(): void {
-<<<<<<< HEAD
-    this.fetch.fetch().subscribe(res =>{
-      console.log(res)
-      this.data = res
-
-      console.log('this is it',this.data)
-    })
-  
-  }
-inject(element : any){
-this.holder = element
-console.log(this.holder)
-}
-sub(){
-  if(this.holder.length){
-    this.fetch.currentMessage.subscribe(message => this.message = message)
-  }
-}
-
-=======
     // this.cardItems = [];
     this.fetch.fetch().subscribe((res) => {
       console.log(res);
@@ -77,6 +52,5 @@ public cardItems: Object[] = [];
     localStorage.setItem('cardData', JSON.stringify(this.cardItems));
     console.log(this.holder);
   }
->>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
 }
 

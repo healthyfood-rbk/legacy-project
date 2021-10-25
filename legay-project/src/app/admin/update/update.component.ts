@@ -21,7 +21,7 @@ export class UpdateComponent implements OnInit {
   }
   updateFood(data:any): void {
     
-    this.id = this.fetch.currentFood;
+    // this.id = this.fetch.currentFood;
     
     console.log("done ", this.id);
     //  this.fetch.delete(`${baseUrl}/${this.data.element._id}`)

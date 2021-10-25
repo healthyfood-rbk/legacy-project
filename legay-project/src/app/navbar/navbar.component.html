@@ -8,10 +8,7 @@
       pb-0
       shadow-lg
       md:pb-4
-<<<<<<< HEAD
-=======
       flex
->>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
     "
   >
     <div class="flex items-center justify-between mb-4 md:mb-0">
@@ -30,11 +27,7 @@
     <form class="mb-4 w-full md:mb-0 md:w-1/4">
       <label class="hidden" for="search-form">Search</label>
       <input
-<<<<<<< HEAD
-        (keyup)="onChange($event); check()"
-=======
         (keyup)="onChange($event)"
->>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
         class="
           bg-grey-lightest
           border-2
@@ -85,15 +78,6 @@
           </a>
         </li>
         <li class="md:ml-4">
-<<<<<<< HEAD
-          <app-login-button
-            *ngIf="(auth.isAuthenticated$ | async) === false"
-          ></app-login-button>
-        </li>
-        <li class="md:ml-4">
-          <app-logout-button *ngIf="auth.isAuthenticated$ | async">
-          </app-logout-button>
-=======
           <a
             class="
               border-t
@@ -116,7 +100,6 @@
           <app-login-button
             *ngIf="(auth.isAuthenticated$ | async) === false"
           ></app-login-button>
->>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
         </li>
         <div class="md:ml-4 flex gap-4" *ngIf="auth.isAuthenticated$ | async">
           <a

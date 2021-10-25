@@ -9,14 +9,8 @@ const baseUrl = 'http://localhost:3000'
   providedIn: 'root'
 })
 export class DatabaseService {
-<<<<<<< HEAD
-  currentFood : string ='';
-  private messageSource = new BehaviorSubject<any>("default message")
-  currentMessage = this.messageSource.asObservable();
-=======
  public messageSource = new BehaviorSubject<any>("")
  public details = new BehaviorSubject<any>("")
->>>>>>> a8c531dde03b31582b7a848b1b9813d3a01beec3
   lifter : any
     constructor(private http: HttpClient) { 
     }
