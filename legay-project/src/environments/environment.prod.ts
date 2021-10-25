@@ -7,4 +7,4 @@ export const environment = {
     clientId : auth_config.clientId,
     redirectUri : window.location.origin
   }
-}
+};
