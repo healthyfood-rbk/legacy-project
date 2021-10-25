@@ -1,10 +1,10 @@
 <div class="min-w-screen h-screen animated fadeIn faster  fixed  left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover" >
    	<div class="absolute bg-transparent opacity-80 inset-0 z-0"></div>
-    <div class="w-1/2 p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-white ">
+    <div class="w-4/5 p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-white ">
       <!--content-->
       <div class="">
-        <div class="w-full lg:max-w-full lg:flex">
-            <div class="h-48 lg:h-auto lg:w-52 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/singleimagebug-lasagna-stuffed-zucchini-pin-1560982245.jpg?crop=1xw:0.9453781512605042xh;center,top&resize=980:*')">
+        <div class="w-full h-full lg:flex">
+            <div class="h-48 lg:h-auto lg:w-52 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('{{message.imageUrl}}')">
             </div>
             <div class=" border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div class="mb-8">
@@ -14,17 +14,11 @@
                   </svg>
                   Members only
                 </p>
-                <div class=" text-gray-900 font-bold text-xl mb-2">5 National Forests across the U.S.</div>
-                <p class=" text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicizaeazeaazfjzehzezjebjlzefblzf"blejzljezbglozbgjlzbjgzebjgjrebejlgadzcafzafafafazfazdazaefzefefzefng elit. Volupttibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+                <div class=" text-gray-900 font-bold text-xl mb-2">{{message.name}}</div>
+                <div *ngFor = "let e of message.ingredients">
+                <p class=" text-gray-700 text-base">{{e}}</p>
               </div>
-  
-              <div class="flex items-center">
-                <img class="w-10 h-10 rounded-full mr-4" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/singleimagebug-lasagna-stuffed-zucchini-pin-1560982245.jpg?crop=1xw:0.9453781512605042xh;center,top&resize=980:*" alt="Avatar of Writer">
-                <div class="text-sm">
-                  <p class="text-gray-900 leading-none">Rafael Martin</p>
-                  <p class="text-gray-600">Aug 9</p>
-                </div>
-              </div>
+            </div>
             </div>
           </div>
       </div>
